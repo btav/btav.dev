@@ -1,0 +1,40 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+---
+
+<nav>
+  <ul>
+    <li>
+      <HeaderLink href="/">Home</HeaderLink>
+    </li>
+    <li>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+    </li>
+    <li>
+      <HeaderLink href="/uses">Uses</HeaderLink>
+    </li>
+    <li>
+      <HeaderLink href="/coffee">Coffee</HeaderLink>
+    </li>
+  </ul>
+  <ThemeToggle />
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--accent-color);
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 16px;
+    padding-inline-start: unset;
+  }
+</style>

@@ -1,4 +1,4 @@
-# btav.dev
+# btav.dev [![Netlify Status](https://api.netlify.com/api/v1/badges/d6cb493f-631e-4fc1-a51c-7f5eab726577/deploy-status)](https://app.netlify.com/sites/btav/deploys)
 
 ## 🚀 Project Structure
 

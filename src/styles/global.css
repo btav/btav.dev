@@ -1,24 +1,27 @@
 :root {
-  --white: #f3f3f4;
+  --white-1: #f3f3f4;
+  --white-2: #e5e9f0;
+  --purple-1: #4f46e5;
+  --purple-2: #7678ed;
+  --black-1: #34312d;
+  --black-2: #242423;
+  --gray-1: #696969;
+
+  --background-color: var(--white-1);
+  --heading-color: var(--black-1);
+  --text-color: var(--gray-1);
+  --accent-color: var(--purple-1);
   --box-shadow: var(--accent-color) 0px 0px 0px 5px;
-  --background-color: var(--white);
-  --heading-color: #34312d;
-  --text-color: #696969;
-  --accent-color: #4f46e5;
-  --secondary-background-color: #e5e9f0;
   --theme-icon: "";
   --theme-color: linear-gradient(130deg, #f2fa8f, #eb9a25);
   --theme-background: url("/clouds.png");
 }
 
 :root.dark {
-  --background-color: #242423;
-  --heading-color: var(--white);
-  --text-color: #ababab;
-  /* --accent-color: #7678ed; */
-  --accent-color: #1db954;
-  --secondary-background-color: #222939;
-  --secondary-text-color: #9883e5;
+  --background-color: var(--black-2);
+  --heading-color: var(--white-1);
+  --text-color: var(--white-2);
+  --accent-color: var(--purple-2);
   --theme-icon: url("/moon_crater.png");
   --theme-color: linear-gradient(130deg, #fafbfe, #9aa4b1);
   --theme-background: url("/stars.png");
@@ -69,13 +72,13 @@ b {
 }
 a {
   color: var(--accent-color);
-  text-decoration: none;
+  text-underline-offset: 0.2em;
+  transition: all 0.2s;
 }
 a:hover {
-  color: var(--accent-color);
-  text-underline-offset: 6px;
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
+  color: var(--white-1);
+  background-color: var(--accent-color);
+  opacity: 1;
 }
 p {
   margin-bottom: 1em;
@@ -98,25 +101,9 @@ img {
   height: auto;
   border-radius: 8px;
 }
-code {
-  padding: 2px 5px;
-  background-color: var(--secondary-background-color);
-  border-radius: 2px;
-}
-pre {
-  padding: 1.5em;
-  border-radius: 8px;
-}
-pre > code {
-  all: unset;
-}
 blockquote {
   border-left: 4px solid var(--accent-color);
   padding: 0 0 0 20px;
   margin: 0px;
   font-size: 1em;
-}
-hr {
-  border: none;
-  border-top: 1px solid var(--secondary-background-color);
 }

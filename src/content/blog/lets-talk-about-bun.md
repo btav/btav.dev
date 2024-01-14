@@ -1,5 +1,5 @@
 ---
-title: "Let's talk about Bun 1.0"
+title: "Let's talk about Bun v1.0"
 description: "This is a written version of the talk I gave at React Ottawa, breaking down the 1.0 release of Bun at a high level."
 pubDate: "Oct 18 2023"
 heroImage: "/blog-lets-talk-about-bun/cover.jpg"
@@ -9,25 +9,25 @@ heroImage: "/blog-lets-talk-about-bun/cover.jpg"
 
 ## What exactly is Bun?
 
-At its core, Bun is a JavaScript runtime, similar to [Node](https://nodejs.org/en) and [Deno](https://deno.com/). Which allows JavaScript to interact with lower-level system resources like the file system and network services.
+At its core, Bun is a JavaScript runtime, similar to [Node](https://nodejs.org/en) and [Deno](https://deno.com/). Which allows JavaScript to interact with lower-level system resources like the file system and network services. Before JavaScript runtimes like these existed, JavaScript was confined to running only in web browsers. It was simply a programming language for the web.
 
 Bun focuses on developer experience and performance.
 
-The state of tooling in the JavaScript ecosystem is somewhat fragmented. A lot of tools are required when your starting a project for bundling, testing, etc. Bun attempts to improve the developer experience by reducing the number of additional tools you need.
+The state of tooling in the JavaScript ecosystem is somewhat fragmented. A lot of tools are required when your starting a project for transpiling, bundling, testing, etc. Bun attempts to improve the developer experience by reducing the number of additional tools you need.
 
-### JavaScript runtime
+### Running JavaScript or TypeScript
 
 ```bash
 bun index.ts
 ```
 
-### Bundler
+### Bundling code
 
 ```bash
 bun build ./index.tsx --outdir ./out
 ```
 
-### Test runner
+### Running tests
 
 ```bash
 bun test
@@ -48,18 +48,20 @@ Bun uses [JavaScriptCore](https://developer.apple.com/documentation/javascriptco
 
 Previously, JavaScriptCore was also used in [React-Native](https://reactnative.dev/) due to its faster startup times. Ever since React-Native has transitioned to an engine named [Hermes](https://hermesengine.dev/), which is specifically designed for the React-Native use-case.
 
-The API layer of Bun is written in [ZIG](https://ziglang.org/), a low-level programming language. In contrast, Node's API layer is primarily written in C++. ZIG, often hailed as the next generation of the C programming language, simplifies memory management and is known for its speed.
+The API layer of Bun is written in [ZIG](https://ziglang.org/), a low-level programming language, whereas the API layer of Node is mainly written in C++. ZIG, which was released in 2016, didn't exist when Node was created. Often referred as the next generation alternative to the C programming language, ZIG is recognized for its speed and simplified memory management.
 
 ![image breaking down the the bun and node runtimes](/blog-lets-talk-about-bun/1.jpg)
 
 I believe that the performance improvements in Bun are due to its use of JavaScriptCore and a performance-focused API layer. Utilizing JavaScriptCore can lead to faster startup times when installing packages, running tests, and executing code. Unlike Node, Bun's API layer is fundamentally designed for performance. Unlike Node, it does not have a codebase that's over a decade old.
 
-## Features
+Node is a mature project, over a decade old, and currently in version 20. In contrast, Bun is a newcomer that does not maintain a similarly aged codebase. Node, being battle-tested and relied upon by a considerable amount of global code, cannot afford to be as experimental with its runtime. On the other hand, Bun, being in its early stages, has the freedom to be more experimental.
 
-- Supports TypeScript and JSX out of the box
-- Includes built-in SQLite database
-- Built-in support environment variables
-- Buit-in support for Web Socket support
+## List of built-in features
+
+- Supports TypeScript and JSX natively
+- Includes a built-in SQLite database
+- Provides built-in support for environment variables
+- Features built-in support for Web Sockets
 
 ### Node compatibility
 
@@ -75,6 +77,24 @@ const _ = require("underscore");
 ```
 
 <br/>
+
+<!-- ## Bun in Practice
+
+In practice, Bun is fast and easy to use. Installation is straightforward, and the CLI helps you navigate its various commands. In my testing, I decided to conduct my own benchmarks to validate or challenge the benchmarks stated on the Bun website.
+
+I focused on the following three tests. **This is not a comprehensive comparison of Bun and Node performance, but rather an observation of areas where I might see the impact of Bun's claimed performance gains.** All of the following tests were conducted on an M2 MacBook Air. -->
+
+<!-- ### Package manager benchmarks
+
+At the time of release, Bun claims that its package manager is
+
+### Rendering React components using Nextjs
+
+placeholder
+
+### HTTP request benchmarks
+
+placeholder -->
 
 ## Final Thoughts
 

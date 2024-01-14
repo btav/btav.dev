@@ -101,6 +101,13 @@ img {
   height: auto;
   border-radius: 8px;
 }
+pre {
+  padding: 1.5em;
+  border-radius: 8px;
+}
+pre > code {
+  all: unset;
+}
 blockquote {
   border-left: 4px solid var(--accent-color);
   padding: 0 0 0 20px;

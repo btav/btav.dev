@@ -72,14 +72,12 @@ b {
 }
 a {
   color: var(--accent-color);
-  text-underline-offset: 0.2em;
-  transition: all 0.2s;
+  text-decoration: none;
+  text-underline-offset: 0.25em;
 }
-/* a:hover {
-  color: var(--white-1);
-  background-color: var(--accent-color);
-  opacity: 1;
-} */
+a:hover {
+  text-decoration: underline;
+}
 p {
   margin-bottom: 1em;
 }

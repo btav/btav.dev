@@ -5,7 +5,6 @@ const { slug, title, date } = Astro.props;
 
 <article>
   <a href={`/blog/${slug}`}>{title}</a>
-  <div class="spacer"></div>
   <FormattedDate date={date} />
 </article>
 
@@ -13,7 +12,7 @@ const { slug, title, date } = Astro.props;
   article {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 1rem;
     align-items: center;
     align-content: center;
   }

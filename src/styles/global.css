@@ -1,16 +1,15 @@
-:root {
-  --white-1: #f3f3f4;
-  --white-2: #e5e9f0;
-  --purple-1: #4f46e5;
-  --purple-2: #7678ed;
-  --black-1: #34312d;
-  --black-2: #242423;
-  --gray-1: #696969;
+@import "catppuccin.css";
 
-  --background-color: var(--white-1);
-  --heading-color: var(--black-1);
-  --text-color: var(--gray-1);
-  --accent-color: var(--purple-1);
+:root {
+  --background-color: var(--ctp-latte-base);
+  --heading-color: var(--ctp-latte-text);
+  --text-color: var(--ctp-latte-subtext1);
+  --accent-color: var(--ctp-latte-lavender);
+  --border-color: var(--ctp-latte-blue);
+  --link-color: var(--ctp-latte-blue);
+  --header-bg-color: var(--accent-color);
+  --header-text-color: var(--ctp-latte-base);
+
   --box-shadow: var(--accent-color) 0px 0px 0px 5px;
   --theme-icon: "";
   --theme-color: linear-gradient(130deg, #f2fa8f, #eb9a25);
@@ -18,10 +17,15 @@
 }
 
 :root.dark {
-  --background-color: var(--black-2);
-  --heading-color: var(--white-1);
-  --text-color: var(--white-2);
-  --accent-color: var(--purple-2);
+  --background-color: var(--ctp-mocha-base);
+  --heading-color: var(--ctp-mocha-text);
+  --text-color: var(--ctp-mocha-subtext1);
+  --accent-color: var(--ctp-latte-lavender);
+  --border-color: var(--ctp-latte-blue);
+  --link-color: var(--ctp-mocha-blue);
+  --header-bg-color: var(--accent-color);
+  --header-text-color: var(--ctp-mocha-base);
+
   --theme-icon: url("/moon_crater.png");
   --theme-color: linear-gradient(130deg, #fafbfe, #9aa4b1);
   --theme-background: url("/stars.png");
@@ -71,12 +75,10 @@ b {
   font-weight: 700;
 }
 a {
-  color: var(--accent-color);
-  text-decoration: none;
-  text-underline-offset: 0.25em;
-}
-a:hover {
-  text-decoration: underline;
+  color: var(--link-color);
+  font-weight: 400;
+  text-underline-offset: 0.3ex;
+  text-decoration-thickness: 0.1em;
 }
 p {
   margin-bottom: 1em;

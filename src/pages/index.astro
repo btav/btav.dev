@@ -11,7 +11,7 @@ const posts = (await getCollection("blog")).sort(
 );
 ---
 
-<Layout title="Hello there 👋">
+<Layout title="hello there 👋">
   <main>
     <section class="hero">
       <Image
@@ -22,7 +22,7 @@ const posts = (await getCollection("blog")).sort(
       <div class="hero-content">
         <h1>Brian Farias Tavares</h1>
         <p>
-          I'm a Software Engineer from <a
+          I'm a software engineer from <a
             href="https://goo.gl/maps/ph8WhKSFZKDRgYoY6"
             target="_blank">Ottawa, Canada</a
           >. I work on web stuff at <a
@@ -40,7 +40,7 @@ const posts = (await getCollection("blog")).sort(
       </div>
     </section>
     <section class="posts">
-      <SubHeading>Writing</SubHeading>
+      <h2>Writing</h2>
       {
         posts.map((post) => (
           <PostLink
@@ -94,9 +94,9 @@ const posts = (await getCollection("blog")).sort(
     }
   }
   h1 {
-    font-size: 2em;
+    font-size: 2.25em;
   }
   h2 {
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
 </style>

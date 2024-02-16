@@ -20,8 +20,8 @@
   --background-color: var(--ctp-mocha-base);
   --heading-color: var(--ctp-mocha-text);
   --text-color: var(--ctp-mocha-subtext1);
-  --accent-color: var(--ctp-latte-lavender);
-  --border-color: var(--ctp-latte-blue);
+  --accent-color: var(--ctp-mocha-lavender);
+  --border-color: var(--ctp-mocha-blue);
   --link-color: var(--ctp-mocha-blue);
   --header-bg-color: var(--accent-color);
   --header-text-color: var(--ctp-mocha-base);

@@ -116,8 +116,9 @@ import {
   svg {
     color: var(--heading-color);
   }
-  svg:hover {
-    color: var(--accent-color);
+  svg:hover,
+  svg:focus {
+    color: var(--link-color);
     transform: rotate(8deg);
     transition: transform 0.3s ease;
   }
@@ -125,7 +126,8 @@ import {
     all: unset;
     cursor: pointer;
   }
-  a:hover {
+  a:hover,
+  a:focus {
     background-color: transparent;
   }
 </style>

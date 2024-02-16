@@ -1,6 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import HeaderLink from "./HeaderLink.astro";
 import ThemeToggle from "./ThemeToggle.astro";
+import localProfileImage from "../content/images/profile.png";
 ---
 
 <nav>
@@ -22,7 +24,7 @@ import ThemeToggle from "./ThemeToggle.astro";
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
-    border-bottom: 2px solid var(--accent-color);
+    border-bottom: 3px solid var(--border-color);
   }
   ul {
     display: flex;
@@ -30,5 +32,11 @@ import ThemeToggle from "./ThemeToggle.astro";
     list-style-type: none;
     gap: 16px;
     padding-inline-start: unset;
+    align-items: center;
+  }
+  .profile-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
   }
 </style>

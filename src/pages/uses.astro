@@ -1,29 +1,111 @@
 ---
-import SubHeading from "../components/SubHeading.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="uses">
+<Layout title="/uses">
   <main>
-    <h1>Stuff I use</h1>
+    <h1>/uses</h1>
     <p>
-      This is a "uses" page, which lists my favorite gear and software. Check
-      out uses.tech to see the surprising number of other people who also
-      publish one.
+      On this page, you can find most of the tools and resources I use. Visit
+      <a href="https://uses.tech">uses.tech</a> to explore other <b>/uses</b> pages
+      and feel free to share your own.
     </p>
-    <SubHeading>Hardware</SubHeading>
+    <h2>👨‍💻 Software</h2>
+    <ul>
+      <li>
+        <a href="https://code.visualstudio.com/">VSCode</a> w/ <a
+          href="https://marketplace.visualstudio.com/items?itemName=vscodevim.vim"
+          >Vim plugin</a
+        >
+      </li>
+      <li><a href="https://www.warp.dev/">Warp</a></li>
+      <li><a href="https://ohmyz.sh/">Oh-My-Zsh</a></li>
+      <li><a href="https://iterm2.com/">iTerm2</a></li>
+      <li><a href="https://www.notion.so/">Notion</a></li>
+      <li><a href="https://1password.com/">1Password</a></li>
+    </ul>
+    <h2>⚙️ Hardware</h2>
     <ul>
       <li>MacBook Pro 16" M1 Max (work)</li>
       <li>Macbook Air 13" M2 (personal)</li>
+      <li>
+        <a href="https://www.keychron.com/products/keychron-q1">Keychron Q1</a>
+      </li>
+      <ul>
+        <li>
+          <a href="https://divinikey.com/products/gateron-ink-v2-switches"
+            >Gateron Black Ink switches</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://drop.com/buy/mt3-9009-pbt-keycap-set?defaultSelectionIds=968777"
+            >MiTo MiTo MT3 9009 PBT Keycaps</a
+          >
+        </li>
+      </ul>
+      <li>
+        <a
+          href="https://www.logitech.com/en-ca/products/mice/mx-master-3s.910-006558.html"
+          >Logitech MX Master 3s</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.logitech.com/en-us/products/mice/mx-ergo-wireless-trackball-mouse.html"
+          >Logitech MX Ergo</a
+        >
+      </li>
+      <li>Air Pods 3rd Gen</li>
+      <li>
+        <a href="https://drop.com/buy/massdrop-sennheiser-hd6xx"
+          >Sennheiser 6xx</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.shure.com/en-US/products/microphones/sm7b?variant=SM7B"
+          >Shure SM7B</a
+        >
+      </li>
     </ul>
-    <SubHeading>Coding</SubHeading>
+    <h2>📷 Photography</h2>
     <ul>
-      <li>VSCode</li>
+      <li>Sony A6500 (discontinued)</li>
+      <li>
+        <a href="https://www.ricoh-imaging.co.jp/english/products/gr-3/"
+          >Ricoh GR III</a
+        >
+      </li>
+      <li>iPhone 14 Pro Max</li>
     </ul>
-    <SubHeading>Photography</SubHeading>
+    <h2>☕ Coffee setup</h2>
     <ul>
-      <li>Sony A6500</li>
-      <li>Ricoh GRIII</li>
+      <li>
+        <a href="https://ascaso-canada.ca/products/ascaso-dream-pid"
+          >Ascaso Dream PID</a
+        >
+      </li>
+      <li>
+        <a href="https://www.nichecoffee.co.uk/products/niche-zero"
+          >Niche Zero</a
+        >
+      </li>
+      <li>
+        <a href="https://www.hario-canada.ca/products/hario-scale-timer"
+          >Hario V60 Drip Scale</a
+        >
+      </li>
+      <li>Hario V60</li>
+      <li>Chemex</li>
+      <li>Random french press</li>
+      <li>Aeropress</li>
     </ul>
   </main>
 </Layout>
+
+<style>
+  h1 {
+    color: var(--accent-color);
+  }
+</style>

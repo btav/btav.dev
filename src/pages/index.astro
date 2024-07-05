@@ -5,14 +5,16 @@ import localProfileImage from "../content/images/profile.png";
 import SocialLinks from "../components/SocialLinks.astro";
 import Layout from "../layouts/Layout.astro";
 import PostLink from "../components/PostLink.astro";
+import ExperienceLink from "../components/ExperienceLink.astro";
+import { WORK, VOLUNTEER, EDUCATION } from "../consts";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
-<Layout title="hello there 👋">
-  <main>
+<Layout title="👋">
+  <div class="container">
     <section class="hero">
       <Image
         class="profile-image"
@@ -22,25 +24,17 @@ const posts = (await getCollection("blog")).sort(
       <div class="hero-content">
         <h1>Brian Farias Tavares</h1>
         <p>
-          I'm a software engineer from <a
-            href="https://goo.gl/maps/ph8WhKSFZKDRgYoY6"
-            target="_blank">Ottawa, Canada</a
-          >. I work on web stuff at <a
-            target="_blank"
-            href="https://spotify.com/">Spotify</a
-          >. I help co-organize the <a
-            href="https://www.meetup.com/Ottawa-ReactJS-Meetup/"
-            target="_blank">React Ottawa Meetup</a
-          > and serve on the board of governors at <a
-            href="https://cegep-heritage.qc.ca"
-            target="_blank">Heritage College</a
-          >.
+          Passionate software engineer who cares about their craft, based in
+          <a
+            href="https://www.google.ca/maps/place/Ottawa,+ON/@45.2496825,-76.1298849,10z/data=!3m1!4b1!4m6!3m5!1s0x4cce05b25f5113af:0x8a6a51e131dd15ed!8m2!3d45.4200572!4d-75.7003397!16zL20vMDVrc2g?entry=ttu"
+            >Ottawa, Canada 🇨🇦</a
+          >
         </p>
         <SocialLinks />
       </div>
     </section>
     <section class="posts">
-      <h2>Writing</h2>
+      <h2>✍️ Writings</h2>
       {
         posts.map((post) => (
           <PostLink
@@ -53,11 +47,56 @@ const posts = (await getCollection("blog")).sort(
         ))
       }
     </section>
-  </main>
+    <section class="experience">
+      <h2>👨‍🚀 Work</h2>
+      {
+        WORK.map(({ title, startDate, endDate, company, image, url }) => (
+          <ExperienceLink
+            title={title}
+            startDate={startDate}
+            endDate={endDate}
+            company={company}
+            image={image}
+            url={url}
+          />
+        ))
+      }
+    </section>
+    <section class="experience">
+      <h2>🙋‍♂️ Volunteering</h2>
+      {
+        VOLUNTEER.map(({ title, startDate, endDate, company, image, url }) => (
+          <ExperienceLink
+            title={title}
+            startDate={startDate}
+            endDate={endDate}
+            company={company}
+            image={image}
+            url={url}
+          />
+        ))
+      }
+    </section>
+    <section class="experience">
+      <h2>🎓 Education</h2>
+      {
+        EDUCATION.map(({ title, startDate, endDate, company, image, url }) => (
+          <ExperienceLink
+            title={title}
+            startDate={startDate}
+            endDate={endDate}
+            company={company}
+            image={image}
+            url={url}
+          />
+        ))
+      }
+    </section>
+  </div>
 </Layout>
 
 <style>
-  main {
+  .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -67,13 +106,19 @@ const posts = (await getCollection("blog")).sort(
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     gap: 24px;
     padding: 0.5rem;
+    width: 100%;
     @media (max-width: 768px) {
       flex-direction: column;
       text-align: center;
     }
+  }
+  .experience {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
   }
   .posts {
     display: flex;
@@ -82,9 +127,10 @@ const posts = (await getCollection("blog")).sort(
     width: 100%;
   }
   .profile-image {
-    width: 256px;
-    height: 256px;
-    border-radius: 50%;
+    width: 192px;
+    height: 192px;
+    border-radius: 10%;
+    box-shadow: var(--box-shadow);
   }
   .hero-content {
     display: flex;
@@ -92,11 +138,5 @@ const posts = (await getCollection("blog")).sort(
     @media (max-width: 768px) {
       align-items: center;
     }
-  }
-  h1 {
-    font-size: 2.25em;
-  }
-  h2 {
-    font-size: 1.5em;
   }
 </style>

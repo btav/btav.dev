@@ -4,12 +4,28 @@ const { slug, title, date } = Astro.props;
 ---
 
 <article>
-  <a href={`/blog/${slug}`}>{title}</a>
-  <FormattedDate date={date} />
+  <a href={`/blog/${slug}`}>
+    <span class="title">{title}</span>
+    <span class="divider"></span>
+    <FormattedDate date={date} />
+  </a>
 </article>
 
 <style>
   a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     text-wrap: nowrap;
+    text-decoration: none;
+  }
+  .title:hover {
+    text-decoration: underline;
+  }
+  .divider {
+    flex-grow: 1;
+    border-top: 1px dashed var(--text-color);
+    margin: 1rem;
   }
 </style>

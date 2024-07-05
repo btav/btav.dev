@@ -1,30 +1,27 @@
-@import "catppuccin.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --background-color: var(--ctp-latte-base);
-  --heading-color: var(--ctp-latte-text);
-  --text-color: var(--ctp-latte-subtext1);
-  --accent-color: var(--ctp-latte-lavender);
-  --border-color: var(--ctp-latte-blue);
-  --link-color: var(--ctp-latte-blue);
-  --header-bg-color: var(--accent-color);
-  --header-text-color: var(--ctp-latte-base);
+  --background-color: #f5f4f2;
+  --heading-color: #20202c;
+  --text-color: rgba(32, 32, 44, 0.75);
+  --accent-color: #7287fd;
+  --accent-color: #a2bce0;
+  --border-color: #383630;
+  --link-color: #1e66f5;
 
-  --box-shadow: var(--accent-color) 0px 0px 0px 5px;
+  --box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   --theme-icon: "";
   --theme-color: linear-gradient(130deg, #f2fa8f, #eb9a25);
   --theme-background: url("/clouds.png");
 }
 
 :root.dark {
-  --background-color: var(--ctp-mocha-base);
-  --heading-color: var(--ctp-mocha-text);
-  --text-color: var(--ctp-mocha-subtext1);
-  --accent-color: var(--ctp-mocha-lavender);
-  --border-color: var(--ctp-mocha-blue);
-  --link-color: var(--ctp-mocha-blue);
-  --header-bg-color: var(--accent-color);
-  --header-text-color: var(--ctp-mocha-base);
+  --background-color: #20222b;
+  --heading-color: #fff;
+  --text-color: hsla(0, 0%, 100%, 0.75);
+  --border-color: #fff;
+  --accent-color: #3b429f;
+  --link-color: #89b4fa;
 
   --theme-icon: url("/moon_crater.png");
   --theme-color: linear-gradient(130deg, #fafbfe, #9aa4b1);
@@ -32,17 +29,10 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  text-align: left;
+  font-family: "Noto Sans", sans-serif;
   background-color: var(--background-color);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
   color: var(--text-color);
-  font-size: 18px;
-  line-height: 1.7;
-  width: 1024px;
-  max-width: calc(100% - 2em);
-  margin: auto;
+  font-size: 1rem;
 }
 
 h1,
@@ -78,7 +68,10 @@ a {
   color: var(--link-color);
   font-weight: 400;
   text-underline-offset: 0.3ex;
-  text-decoration-thickness: 0.1em;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 p {
   margin-bottom: 1em;
@@ -113,4 +106,5 @@ blockquote {
   padding: 0 0 0 20px;
   margin: 0px;
   font-size: 1em;
+  font-family: monospace;
 }

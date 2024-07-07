@@ -1,3 +1,10 @@
+import SpotifyImage from "./content/images/spotify.png";
+import ElseLabsImage from "./content/images/elselabs.png";
+import VersatermImage from "./content/images/versaterm.png";
+import EnvironmentCanadaImage from "./content/images/environment-canada.png";
+import HeritageImage from "./content/images/heritage.png";
+import ForwardImage from "./content/images/forward.png";
+
 export const SITE_TITLE = "btav";
 export const SITE_DESCRIPTION = "Welcome to my website!";
 export const SPOTIFY_URL = "https://open.spotify.com/user/brian_ft";
@@ -11,7 +18,7 @@ export const WORK = [
     company: "Spotify",
     startDate: "Jan 2023",
     endDate: "Present",
-    image: "/spotify.png",
+    image: SpotifyImage,
     url: "https://spotify.com",
   },
   {
@@ -19,7 +26,7 @@ export const WORK = [
     company: "Else Labs",
     startDate: "Jan 2017",
     endDate: "Dec 2022",
-    image: "/elselabs.png",
+    image: ElseLabsImage,
     url: "https://elselabs.io",
   },
   {
@@ -27,7 +34,7 @@ export const WORK = [
     company: "Versaterm",
     startDate: "Apr 2012",
     endDate: "Jan 2017",
-    image: "/versaterm.png",
+    image: VersatermImage,
     url: "https://versaterm.com",
   },
   {
@@ -35,7 +42,7 @@ export const WORK = [
     company: "Environment Canada",
     startDate: "May 2011",
     endDate: "Aug 2011",
-    image: "/environment-canada.png",
+    image: EnvironmentCanadaImage,
     url: "https://weather.gc.ca/",
   },
 ];
@@ -46,7 +53,7 @@ export const VOLUNTEER = [
     company: "CÉGEP Heritage College",
     startDate: "Sept 2022",
     endDate: "Present",
-    image: "/heritage.png",
+    image: HeritageImage,
     url: "https://cegep-heritage.qc.ca",
   },
   {
@@ -54,7 +61,7 @@ export const VOLUNTEER = [
     company: "ForwardJS Ottawa",
     startDate: "Jul 2018",
     endDate: "Present",
-    image: "/forward.png",
+    image: ForwardImage,
     url: "https://www.meetup.com/ottawa-reactjs-meetup",
   },
 ];
@@ -65,7 +72,7 @@ export const EDUCATION = [
     company: "CÉGEP Heritage College",
     startDate: "2010",
     endDate: "2013",
-    image: "/heritage.png",
+    image: HeritageImage,
     url: "https://www.cegep-heritage.qc.ca/future-students/programs/computer-science/home",
   },
 ];

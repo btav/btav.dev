@@ -1,17 +1,14 @@
 ---
-import { Image } from "astro:assets";
-import HeaderLink from "./HeaderLink.astro";
 import ThemeToggle from "./ThemeToggle.astro";
-import localProfileImage from "../content/images/profile.png";
 ---
 
 <nav>
   <ul>
     <li>
-      <HeaderLink href="/">Home</HeaderLink>
+      <a href="/">Home</a>
     </li>
     <li>
-      <HeaderLink href="/uses">Uses</HeaderLink>
+      <a href="/uses">Uses</a>
     </li>
   </ul>
   <ThemeToggle />
@@ -25,6 +22,7 @@ import localProfileImage from "../content/images/profile.png";
     align-items: center;
     margin-bottom: 2rem;
     border-bottom: 3px solid var(--border-color);
+    font-size: 1rem;
   }
   ul {
     display: flex;
@@ -33,10 +31,5 @@ import localProfileImage from "../content/images/profile.png";
     gap: 16px;
     padding-inline-start: unset;
     align-items: center;
-  }
-  .profile-image {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
   }
 </style>

@@ -5,7 +5,7 @@
   --accent-color: #7287fd;
   --accent-color: #a2bce0;
   --border-color: #383630;
-  --link-color: #1e66f5;
+  --link-color: #ef476f;
 
   --box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   --theme-icon: "";
@@ -19,7 +19,7 @@
   --text-color: hsla(0, 0%, 100%, 0.75);
   --border-color: #fff;
   --accent-color: #3b429f;
-  --link-color: #89b4fa;
+  --link-color: #1bd95f;
 
   --theme-icon: url("/moon_crater.png");
   --theme-color: linear-gradient(130deg, #fafbfe, #9aa4b1);
@@ -64,7 +64,7 @@ b {
 }
 a {
   color: var(--link-color);
-  font-weight: 400;
+  font-weight: 600;
   text-underline-offset: 0.3ex;
   text-decoration: none;
 }

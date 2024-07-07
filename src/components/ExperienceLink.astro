@@ -39,8 +39,10 @@ const { title, startDate, endDate, company, image, url } = Astro.props;
     .content {
       display: flex;
       flex-direction: column;
-      gap: 4px;
       flex-grow: 1;
+    }
+    .content h3 {
+      margin-bottom: 0;
     }
     .image {
       min-width: 64px;

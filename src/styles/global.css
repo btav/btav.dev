@@ -64,7 +64,7 @@ b {
 }
 a {
   color: var(--link-color);
-  font-weight: 600;
+  font-weight: 500;
   text-underline-offset: 0.3ex;
   text-decoration: none;
 }

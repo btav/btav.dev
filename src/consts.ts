@@ -5,7 +5,7 @@ import EnvironmentCanadaImage from "./content/images/environment-canada.png";
 import HeritageImage from "./content/images/heritage.png";
 import ForwardImage from "./content/images/forward.png";
 
-export const SITE_TITLE = "btav";
+export const SITE_TITLE = "Brian Farias Tavares";
 export const SITE_DESCRIPTION = "Welcome to my website!";
 export const SPOTIFY_URL = "https://open.spotify.com/user/brian_ft";
 export const GITHUB_URL = "https://github.com/btav";

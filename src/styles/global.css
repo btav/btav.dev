@@ -106,3 +106,7 @@ blockquote {
   font-size: 1em;
   font-family: monospace;
 }
+
+@view-transition {
+  navigation: auto;
+}

@@ -1,6 +1,6 @@
 ---
 title: "Notes on system design interviews"
-description: "System design interviews"
+description: "notes on system design interviews"
 pubDate: "Aug 20 2024"
 ---
 

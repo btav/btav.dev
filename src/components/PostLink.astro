@@ -19,6 +19,10 @@ const { slug, title, date } = Astro.props;
     align-items: center;
     text-wrap: nowrap;
     text-decoration: none;
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
   }
   .title:hover {
     text-decoration: underline;
@@ -27,5 +31,8 @@ const { slug, title, date } = Astro.props;
     flex-grow: 1;
     border-top: 1px dashed var(--text-color);
     margin: 1rem;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 </style>

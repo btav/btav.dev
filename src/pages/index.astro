@@ -34,7 +34,7 @@ const posts = (await getCollection("blog")).sort(
       </div>
     </section>
     <section class="posts">
-      <h2>✍️ Writings</h2>
+      <h2>Writings</h2>
       {
         posts.map((post) => (
           <PostLink
@@ -48,7 +48,7 @@ const posts = (await getCollection("blog")).sort(
       }
     </section>
     <section class="experience">
-      <h2>👨‍🚀 Work</h2>
+      <h2>Work</h2>
       {
         WORK.map(({ title, startDate, endDate, company, image, url }) => (
           <ExperienceLink
@@ -63,7 +63,7 @@ const posts = (await getCollection("blog")).sort(
       }
     </section>
     <section class="experience">
-      <h2>🙋‍♂️ Volunteering</h2>
+      <h2>Volunteering</h2>
       {
         VOLUNTEER.map(({ title, startDate, endDate, company, image, url }) => (
           <ExperienceLink
@@ -78,7 +78,7 @@ const posts = (await getCollection("blog")).sort(
       }
     </section>
     <section class="experience">
-      <h2>🎓 Education</h2>
+      <h2>Education</h2>
       {
         EDUCATION.map(({ title, startDate, endDate, company, image, url }) => (
           <ExperienceLink

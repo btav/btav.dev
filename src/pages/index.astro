@@ -5,8 +5,6 @@ import localProfileImage from "../content/images/profile.png";
 import SocialLinks from "../components/SocialLinks.astro";
 import Layout from "../layouts/Layout.astro";
 import PostLink from "../components/PostLink.astro";
-import ExperienceLink from "../components/ExperienceLink.astro";
-import { WORK, VOLUNTEER, EDUCATION } from "../consts";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -47,51 +45,6 @@ const posts = (await getCollection("blog")).sort(
         ))
       }
     </section>
-    <section class="experience">
-      <h2>Work</h2>
-      {
-        WORK.map(({ title, startDate, endDate, company, image, url }) => (
-          <ExperienceLink
-            title={title}
-            startDate={startDate}
-            endDate={endDate}
-            company={company}
-            image={image}
-            url={url}
-          />
-        ))
-      }
-    </section>
-    <section class="experience">
-      <h2>Volunteering</h2>
-      {
-        VOLUNTEER.map(({ title, startDate, endDate, company, image, url }) => (
-          <ExperienceLink
-            title={title}
-            startDate={startDate}
-            endDate={endDate}
-            company={company}
-            image={image}
-            url={url}
-          />
-        ))
-      }
-    </section>
-    <section class="experience">
-      <h2>Education</h2>
-      {
-        EDUCATION.map(({ title, startDate, endDate, company, image, url }) => (
-          <ExperienceLink
-            title={title}
-            startDate={startDate}
-            endDate={endDate}
-            company={company}
-            image={image}
-            url={url}
-          />
-        ))
-      }
-    </section>
   </div>
 </Layout>
 
@@ -112,12 +65,6 @@ const posts = (await getCollection("blog")).sort(
       flex-direction: column;
       text-align: center;
     }
-  }
-  .experience {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
   }
   .posts {
     display: flex;

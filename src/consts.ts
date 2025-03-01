@@ -15,7 +15,7 @@ export const BLUESKY_URL = "https://bsky.app/profile/btav.dev";
 
 export const WORK = [
   {
-    title: "Senior Software Engineer",
+    title: "Senior Engineer",
     company: "Spotify",
     startDate: "Jan 2023",
     endDate: "Present",

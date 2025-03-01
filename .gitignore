@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # vscode directory
 .vscode/
+
+# JetBrains directory
+.idea/

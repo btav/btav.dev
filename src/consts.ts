@@ -53,7 +53,7 @@ export const VOLUNTEER = [
     title: "Board of Governors",
     company: "CÉGEP Heritage College",
     startDate: "Sept 2022",
-    endDate: "Present",
+    endDate: "June 2025",
     image: HeritageImage,
     url: "https://cegep-heritage.qc.ca",
   },

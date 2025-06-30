@@ -50,20 +50,20 @@ export const WORK = [
 
 export const VOLUNTEER = [
   {
-    title: "Board of Governors",
-    company: "CÉGEP Heritage College",
-    startDate: "Sept 2022",
-    endDate: "June 2025",
-    image: HeritageImage,
-    url: "https://cegep-heritage.qc.ca",
-  },
-  {
     title: "Organizer",
     company: "ForwardJS Ottawa",
     startDate: "Jul 2018",
     endDate: "Present",
     image: ForwardImage,
     url: "https://www.meetup.com/ottawa-reactjs-meetup",
+  },
+  {
+    title: "Board of Governors",
+    company: "CÉGEP Heritage College",
+    startDate: "Sept 2022",
+    endDate: "June 2025",
+    image: HeritageImage,
+    url: "https://cegep-heritage.qc.ca",
   },
 ];
 

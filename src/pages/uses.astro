@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="/uses">
-  <div>
+  <div class="content">
     <h1>/uses</h1>
     <p>
       On this page, you can find most of the tools and resources I use. Visit
@@ -121,3 +121,10 @@ import Layout from "../layouts/Layout.astro";
     </ul>
   </div>
 </Layout>
+
+<style>
+  .content {
+    max-width: 65ch;
+    margin: 0 auto;
+  }
+</style>

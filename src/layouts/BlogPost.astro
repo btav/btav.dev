@@ -17,27 +17,37 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <style>
       .hero-image {
         width: 100%;
+        max-width: 65ch;
+        margin: 0 auto 2em;
+      }
+      .hero-image img {
+        width: 100%;
+        height: auto;
       }
       .prose {
-        margin: auto;
+        max-width: 65ch;
+        margin: 0 auto;
       }
       .title {
-        margin-bottom: 1em;
-        padding: 1em 0;
         text-align: center;
-        line-height: 1;
+        line-height: 1.2;
       }
       .title h1 {
         margin: 0 0 0.5em 0;
+        line-height: 1.2;
       }
       .date {
-        margin-bottom: 0.5em;
+        margin-bottom: 1em;
+        color: var(--text-color);
+        font-size: 0.9em;
       }
       .last-updated-on {
         font-style: italic;
+        margin-top: 0.25em;
       }
       article {
         line-height: 1.8;
+        font-size: 1.1rem;
       }
     </style>
   </head>

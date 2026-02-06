@@ -5,7 +5,7 @@ const { slug, title, date } = Astro.props;
 
 <article>
   <a href={`/blog/${slug}`}>
-    <span class="title">{title}</span>
+    <span class="title">{title.toLowerCase()}</span>
     <span class="divider"></span>
     <FormattedDate date={date} />
   </a>
@@ -13,24 +13,33 @@ const { slug, title, date } = Astro.props;
 
 <style>
   a {
+    padding: 0.5rem 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     text-wrap: nowrap;
     text-decoration: none;
+    color: var(--text-color);
     @media (max-width: 768px) {
       flex-direction: column-reverse;
       align-items: flex-start;
     }
   }
-  .title:hover {
+  a:hover .title {
+    text-decoration-color: var(--text-color);
+  }
+  .title {
+    color: var(--heading-color);
     text-decoration: underline;
+    text-decoration-color: var(--border-color);
+    text-underline-offset: 0.3ex;
+    transition: text-decoration-color 0.2s ease;
   }
   .divider {
     flex-grow: 1;
-    border-top: 1px dashed var(--text-color);
-    margin: 1rem;
+    border-top: 1px dashed var(--border-color);
+    margin: 0 1rem;
     @media (max-width: 768px) {
       display: none;
     }

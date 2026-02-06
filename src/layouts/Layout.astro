@@ -3,17 +3,14 @@ import BaseHead from "../components/BaseHead.astro";
 import Navigation from "../components/Navigation.astro";
 import Container from "../components/Container.astro";
 import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { NAME, DESCRIPTION } from "../consts";
 const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead
-      title={`${title} - ${SITE_TITLE}`}
-      description={SITE_DESCRIPTION}
-    />
+    <BaseHead title={`${title} - ${NAME}`} description={DESCRIPTION} />
   </head>
   <body>
     <Container>

@@ -1,29 +1,36 @@
 ---
-
+import { Icon } from "astro-icon/components";
 ---
 
 <button id="themeToggle" aria-label="Toggle between light and dark mode">
-  <span class="sun">☀</span>
-  <span class="moon">☾</span>
+  <Icon name="tabler:sun" class="sun" />
+  <Icon name="tabler:moon" class="moon" />
 </button>
 
 <style>
   button {
     all: unset;
+    display: inline-flex;
+    align-items: center;
     cursor: pointer;
-    font-family: inherit;
-    font-size: 0.875rem;
     color: var(--text-color);
+    padding: 0.25rem;
+    margin: -0.25rem;
+    border-radius: 4px;
     transition: color 0.2s ease;
   }
   button:hover {
     color: var(--heading-color);
   }
+  [data-icon] {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
   .sun {
     display: none;
   }
   :global(.dark) .sun {
-    display: inline;
+    display: inline-block;
   }
   :global(.dark) .moon {
     display: none;
@@ -33,7 +40,10 @@
 <script is:inline>
   function applyTheme() {
     const theme = (() => {
-      if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      if (
+        typeof localStorage !== "undefined" &&
+        localStorage.getItem("theme")
+      ) {
         return localStorage.getItem("theme");
       }
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -52,8 +62,6 @@
   }
 
   function setupToggle() {
-    const btn = document.getElementById("themeToggle");
-    btn.replaceWith(btn.cloneNode(true));
     document.getElementById("themeToggle").addEventListener("click", () => {
       const element = document.documentElement;
       element.classList.toggle("dark");
@@ -64,10 +72,4 @@
 
   applyTheme();
   setupToggle();
-
-  if (!window._themeSwapRegistered) {
-    document.addEventListener("astro:after-swap", applyTheme);
-    document.addEventListener("astro:after-swap", setupToggle);
-    window._themeSwapRegistered = true;
-  }
 </script>

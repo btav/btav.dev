@@ -1,47 +1,68 @@
 ---
 import FormattedDate from "./FormattedDate.astro";
-const { slug, title, date } = Astro.props;
+
+interface Props {
+  slug: string;
+  title: string;
+  description: string;
+  date: Date;
+}
+
+const { slug, title, description, date } = Astro.props;
 ---
 
 <article>
   <a href={`/blog/${slug}`}>
-    <span class="title">{title.toLowerCase()}</span>
-    <span class="divider"></span>
-    <FormattedDate date={date} />
+    <div>
+      <span class="title">{title}</span>
+      <p>{description}</p>
+    </div>
+    <span class="date">
+      <FormattedDate date={date} />
+    </span>
   </a>
 </article>
 
 <style>
+  article {
+    border-bottom: 1px solid var(--border-color);
+  }
   a {
-    padding: 0.5rem 0;
+    padding: 0.9rem 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    text-wrap: nowrap;
+    align-items: flex-start;
+    gap: 1.5rem;
     text-decoration: none;
-    color: var(--text-color);
-    @media (max-width: 768px) {
-      flex-direction: column-reverse;
-      align-items: flex-start;
-    }
   }
   a:hover .title {
-    text-decoration-color: var(--text-color);
+    text-decoration: underline;
   }
   .title {
-    color: var(--heading-color);
-    text-decoration: underline;
-    text-decoration-color: var(--border-color);
-    text-underline-offset: 0.3ex;
-    transition: text-decoration-color 0.2s ease;
+    display: inline-block;
+    color: var(--link-color);
+    font-weight: 400;
+    text-underline-offset: 0.5ex;
   }
-  .divider {
-    flex-grow: 1;
-    border-top: 1px dashed var(--border-color);
-    margin: 0 1rem;
-    @media (max-width: 768px) {
-      display: none;
+  p {
+    max-width: 42rem;
+    margin: 0.25rem 0 0;
+    color: var(--muted-color);
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  .date {
+    flex: 0 0 auto;
+    color: var(--muted-color);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    white-space: nowrap;
+  }
+  @media (max-width: 768px) {
+    a {
+      flex-direction: column-reverse;
+      gap: 0.35rem;
     }
   }
 </style>

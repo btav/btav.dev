@@ -1,36 +1,57 @@
-html {
-  scrollbar-gutter: stable;
-}
-
 :root {
-  --background-color: #fafafa;
-  --heading-color: #171717;
-  --text-color: #404040;
-  --muted-color: #737373;
-  --border-color: #e5e5e5;
-  --surface-color: #f5f5f5;
-  --link-color: #171717;
+  --background-color: #faf8f5;
+  --heading-color: #1a1815;
+  --text-color: #3a3833;
+  --muted-color: #807a72;
+  --border-color: #e8e3da;
+  --surface-color: #f1ece2;
+  --code-bg-color: #f1ece2;
+  --code-border-color: #e0d9c8;
+  --code-text-color: #15803d;
+  --link-color: #15803d;
+
+  --text-base: 1.125rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
 }
 
 :root.dark {
-  --background-color: #171717;
-  --heading-color: #fafafa;
-  --text-color: #a3a3a3;
-  --muted-color: #737373;
-  --border-color: #303030;
-  --surface-color: #262626;
-  --link-color: #fafafa;
+  --background-color: #1a1815;
+  --heading-color: #faf8f5;
+  --text-color: #e8e3da;
+  --muted-color: #8a847a;
+  --border-color: #2e2a25;
+  --surface-color: #25211d;
+  --code-bg-color: #25211d;
+  --code-border-color: #3a352f;
+  --code-text-color: #86efac;
+  --link-color: #86efac;
 }
 
 body {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  margin: 0;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
   background-color: var(--background-color);
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: var(--text-base);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.3s ease, color 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.2s ease;
 }
 
 ::selection {
@@ -47,20 +68,19 @@ h6 {
   margin: 0 0 0.5rem 0;
   color: var(--heading-color);
   line-height: 1.3;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-weight: 700;
 }
 h1 {
-  font-size: 1.75em;
+  font-size: var(--text-4xl);
 }
 h2 {
-  font-size: 1.25em;
+  font-size: var(--text-2xl);
 }
 h3 {
-  font-size: 1em;
+  font-size: var(--text-xl);
 }
 h4 {
-  font-size: 0.875em;
+  font-size: var(--text-base);
 }
 strong,
 b {
@@ -68,13 +88,11 @@ b {
 }
 a {
   color: var(--link-color);
-  text-decoration: underline;
-  text-decoration-color: var(--border-color);
+  text-decoration: none;
   text-underline-offset: 0.3ex;
-  transition: text-decoration-color 0.2s ease, color 0.2s ease;
 }
 a:hover {
-  text-decoration-color: var(--text-color);
+  text-decoration: underline;
 }
 p {
   margin-bottom: 1.25em;
@@ -95,16 +113,15 @@ img {
   border-radius: 4px;
 }
 code {
-  font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
   font-size: 0.875em;
-  background-color: var(--surface-color);
-  padding: 0.15em 0.35em;
+  background-color: var(--code-bg-color);
+  color: var(--code-text-color);
+  border: 1px solid var(--code-border-color);
+  padding: 0.1em 0.35em;
   border-radius: 3px;
-}
-pre {
-  padding: 1.5em;
-  border-radius: 4px;
-  border: 1px solid var(--border-color);
 }
 pre > code {
   all: unset;
@@ -120,13 +137,4 @@ blockquote {
 hr {
   border: none;
   border-top: 1px solid var(--border-color);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@view-transition {
-  navigation: auto;
 }

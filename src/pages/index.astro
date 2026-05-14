@@ -3,7 +3,12 @@ import { getCollection } from "astro:content";
 import SocialLinks from "../components/SocialLinks.astro";
 import Layout from "../layouts/Layout.astro";
 import PostLink from "../components/PostLink.astro";
-import { NAME, DESCRIPTION } from "../consts";
+import {
+  FORWARDJS_URL,
+  HERITAGE_COLLEGE_URL,
+  NAME,
+  OTTAWA_MAP_URL,
+} from "../consts";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -13,16 +18,30 @@ const posts = (await getCollection("blog")).sort(
 <Layout title="home">
   <section class="hero">
     <h1>{NAME}</h1>
-    <p>{DESCRIPTION}</p>
-    <SocialLinks />
+    <div class="intro">
+      <p>
+        I'm a software engineer in <a href={OTTAWA_MAP_URL} target="_blank" rel="noopener">Ottawa, Canada</a>.
+        I've worked at startups and big tech, from new products to systems used
+        by hundreds of millions of people.
+      </p>
+      <p>
+        I co-organize <a href={FORWARDJS_URL} target="_blank" rel="noopener">ForwardJS</a> and serve on the Computer
+        Science Program Advisory Committee at my
+        <a href={HERITAGE_COLLEGE_URL} target="_blank" rel="noopener">alma mater</a>.
+      </p>
+    </div>
+    <div class="socials">
+      <SocialLinks />
+    </div>
   </section>
   <section class="posts">
-    <h2>writings</h2>
+    <h2>Writings</h2>
     {
       posts.map((post) => (
         <PostLink
           slug={post.id}
           title={post.data.title}
+          description={post.data.description}
           date={post.data.pubDate}
         />
       ))
@@ -31,14 +50,13 @@ const posts = (await getCollection("blog")).sort(
 </Layout>
 
 <style>
-  .hero {
-    margin-bottom: 3rem;
+  section {
+    margin-bottom: 2rem;
   }
-  .hero h1 {
-    font-size: 2em;
-    letter-spacing: -0.03em;
+  .intro {
+    max-width: 48rem;
   }
-  .hero p {
+  .intro p {
     margin-bottom: 0.75rem;
   }
   .posts {
@@ -48,10 +66,9 @@ const posts = (await getCollection("blog")).sort(
     width: 100%;
   }
   .posts h2 {
-    text-transform: lowercase;
-    letter-spacing: 0.05em;
-    font-size: 0.85rem;
-    color: var(--muted-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .socials {
+    margin: 1.75rem 0;
   }
 </style>

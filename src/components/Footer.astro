@@ -1,19 +1,27 @@
 ---
 import { NAME } from "../consts";
+import SocialLinks from "./SocialLinks.astro";
 const currentYear = new Date().getFullYear();
 ---
 
 <footer aria-label="Site footer">
+  <div class="socials">
+    <SocialLinks />
+  </div>
   <small>&copy; {currentYear} {NAME}</small>
 </footer>
 
 <style>
   footer {
-    font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
-    font-size: 1rem;
-    border-top: 1px solid var(--border-color);
-    padding: 1.5rem 0;
-    margin: 3rem 0 0;
+    font-size: var(--text-lg);
+    padding: 3rem 0 1.5rem;
+    margin-top: auto;
     color: var(--text-color);
+    text-align: center;
+  }
+  .socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 </style>

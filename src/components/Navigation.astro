@@ -3,7 +3,12 @@ import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <nav>
-  <a href="/" class="site-name">~/btav.dev</a>
+  <a href="/" class="site-name" aria-label="btav.dev — home">
+    <span class="wordmark">
+      <span class="prompt">~/</span>
+      <span>btav.dev</span>
+    </span>
+  </a>
   <ThemeToggle />
 </nav>
 
@@ -14,18 +19,53 @@ import ThemeToggle from "./ThemeToggle.astro";
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border-color);
   }
   .site-name {
-    font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--heading-color);
+    display: inline-flex;
     text-decoration: none;
-    transition: opacity 0.2s ease;
+    border-radius: 5px;
+    color: var(--heading-color);
+    outline-offset: 4px;
   }
   .site-name:hover {
-    opacity: 0.7;
+    text-decoration: none;
+  }
+  .site-name:focus-visible {
+    outline: 2px solid var(--link-color);
+  }
+  .wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    box-sizing: border-box;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--heading-color);
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    font-size: var(--text-base);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    padding: 0.4rem 0.62rem;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+  .prompt {
+    color: var(--link-color);
+  }
+  .site-name:hover .wordmark,
+  .site-name:focus-visible .wordmark {
+    background: rgba(34, 197, 94, 0.08);
+    border-color: rgba(21, 128, 61, 0.45);
+  }
+  :global(.dark) .site-name:hover .wordmark,
+  :global(.dark) .site-name:focus-visible .wordmark {
+    background: rgba(134, 239, 172, 0.08);
+    border-color: rgba(134, 239, 172, 0.45);
   }
 </style>

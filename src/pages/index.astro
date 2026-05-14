@@ -20,14 +20,23 @@ const posts = (await getCollection("blog")).sort(
     <h1>{NAME}</h1>
     <div class="intro">
       <p>
-        I'm a software engineer in <a href={OTTAWA_MAP_URL} target="_blank" rel="noopener">Ottawa, Canada</a>.
-        I've worked at startups and big tech, from new products to systems used
-        by hundreds of millions of people.
+        I'm a software engineer from <a
+          href={OTTAWA_MAP_URL}
+          target="_blank"
+          rel="noopener">Ottawa, Canada</a
+        >. I've worked at startups, medium-sized companies, and big tech, from
+        new products to systems used by hundreds of millions of users.
       </p>
       <p>
-        I co-organize <a href={FORWARDJS_URL} target="_blank" rel="noopener">ForwardJS</a> and serve on the Computer
-        Science Program Advisory Committee at my
-        <a href={HERITAGE_COLLEGE_URL} target="_blank" rel="noopener">alma mater</a>.
+        Outside of work, I help co-organize <a
+          href={FORWARDJS_URL}
+          target="_blank"
+          rel="noopener">ForwardJS</a
+        > and serve on the Computer Science Program Advisory Committee at my <a
+          href={HERITAGE_COLLEGE_URL}
+          target="_blank"
+          rel="noopener">alma mater</a
+        >.
       </p>
     </div>
     <div class="socials">
@@ -51,7 +60,7 @@ const posts = (await getCollection("blog")).sort(
 
 <style>
   section {
-    margin-bottom: 2rem;
+    margin: 1rem 0;
   }
   .intro {
     max-width: 48rem;

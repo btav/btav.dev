@@ -3,12 +3,7 @@ import { getCollection } from "astro:content";
 import SocialLinks from "../components/SocialLinks.astro";
 import Layout from "../layouts/Layout.astro";
 import PostLink from "../components/PostLink.astro";
-import {
-  FORWARDJS_URL,
-  HERITAGE_COLLEGE_URL,
-  NAME,
-  OTTAWA_MAP_URL,
-} from "../consts";
+import { FORWARDJS_URL, NAME, OTTAWA_MAP_URL } from "../consts";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -20,22 +15,16 @@ const posts = (await getCollection("blog")).sort(
     <h1>{NAME}</h1>
     <div class="intro">
       <p>
-        I'm a software engineer from <a
+        I'm a software engineer based in <a
           href={OTTAWA_MAP_URL}
           target="_blank"
           rel="noopener">Ottawa, Canada</a
-        >. I've worked at startups, medium-sized companies, and big tech, from
-        new products to systems used by hundreds of millions of users.
-      </p>
-      <p>
-        Outside of work, I help co-organize <a
+        >. I've worked in early-stage startups, mid-sized companies, and big
+        tech, building everything from greenfield products to large-scale
+        production systems. Outside of work, I help co-organize <a
           href={FORWARDJS_URL}
           target="_blank"
           rel="noopener">ForwardJS</a
-        > and serve on the Computer Science Program Advisory Committee at my <a
-          href={HERITAGE_COLLEGE_URL}
-          target="_blank"
-          rel="noopener">alma mater</a
         >.
       </p>
     </div>

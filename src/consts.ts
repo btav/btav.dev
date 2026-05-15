@@ -1,8 +1,7 @@
 export const NAME = "Brian Farias Tavares";
 export const DESCRIPTION =
-  "I'm a software engineer based in Ottawa, Canada. I've worked in startups, medium-sized companies, and big tech, from greenfield products to planet-scale systems used by hundreds of millions of people. Outside of work, I co-organize ForwardJS and serve on the Computer Science Program Advisory Committee at Cégep Heritage College.";
+  "I'm a software engineer based in Ottawa, Canada. I've worked in early-stage startups, mid-sized companies, and big tech, building everything from greenfield products to large-scale production systems. Outside of work, I help co-organize ForwardJS.";
 export const FORWARDJS_URL = "https://forwardjs.com";
-export const HERITAGE_COLLEGE_URL = "https://www.cegep-heritage.qc.ca/";
 export const SPOTIFY_URL = "https://open.spotify.com/user/brian_ft";
 export const GITHUB_URL = "https://github.com/btav";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/brian-farias-tavares";

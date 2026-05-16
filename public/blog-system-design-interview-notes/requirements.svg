@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="466" viewBox="0 0 1200 466">
+  <style>
+    .canvas { fill: #faf8f5; }
+    .card { fill: #fffdf8; stroke: #e8e3da; stroke-width: 2; }
+    .soft { fill: #f1ece2; stroke: #e8e3da; stroke-width: 2; }
+    .accent { fill: #15803d; }
+    .label { fill: #1a1815; font: 700 20px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .body { fill: #3a3833; font: 500 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .muted { fill: #807a72; font: 500 15px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .chip-text { fill: #1a1815; font: 700 15px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  </style>
+
+  <rect class="canvas" width="1200" height="466" rx="0" />
+
+  <g transform="translate(56 40)">
+    <rect class="card" width="520" height="286" rx="8" />
+    <rect class="accent" x="0" y="0" width="6" height="286" rx="3" />
+    <text class="label" x="32" y="30" dominant-baseline="hanging">Functional requirements</text>
+
+    <circle class="accent" cx="41" cy="91" r="4" />
+    <text class="body" x="58" y="80" dominant-baseline="hanging">Upload videos</text>
+
+    <circle class="accent" cx="41" cy="131" r="4" />
+    <text class="body" x="58" y="120" dominant-baseline="hanging">Watch and search videos</text>
+
+    <circle class="accent" cx="41" cy="171" r="4" />
+    <text class="body" x="58" y="160" dominant-baseline="hanging">Create channels and subscribe to them</text>
+
+    <circle class="accent" cx="41" cy="211" r="4" />
+    <text class="body" x="58" y="200" dominant-baseline="hanging">Like or dislike videos</text>
+
+    <circle class="accent" cx="41" cy="251" r="4" />
+    <text class="body" x="58" y="240" dominant-baseline="hanging">Track video view counts</text>
+  </g>
+
+  <g transform="translate(624 40)">
+    <rect class="card" width="520" height="286" rx="8" />
+    <rect class="accent" x="0" y="0" width="6" height="286" rx="3" />
+    <text class="label" x="32" y="30" dominant-baseline="hanging">Non-functional requirements</text>
+
+    <circle class="accent" cx="41" cy="91" r="4" />
+    <text class="body" x="58" y="80" dominant-baseline="hanging">Low latency playback and browsing</text>
+
+    <circle class="accent" cx="41" cy="131" r="4" />
+    <text class="body" x="58" y="120" dominant-baseline="hanging">Highly available core experience</text>
+
+    <circle class="accent" cx="41" cy="171" r="4" />
+    <text class="body" x="58" y="160" dominant-baseline="hanging">Reliable media storage</text>
+
+    <circle class="accent" cx="41" cy="211" r="4" />
+    <text class="body" x="58" y="200" dominant-baseline="hanging">Works for users in many regions</text>
+
+    <circle class="accent" cx="41" cy="251" r="4" />
+    <text class="body" x="58" y="240" dominant-baseline="hanging">Read-heavy traffic pattern</text>
+  </g>
+
+  <g transform="translate(56 362)">
+    <rect class="soft" width="1088" height="64" rx="8" />
+    <text class="muted" x="28" y="24" dominant-baseline="hanging">Assumptions</text>
+
+    <g transform="translate(138 14)">
+      <rect class="card" width="130" height="36" rx="8" />
+      <text class="chip-text" x="22" y="10" dominant-baseline="hanging">50M users</text>
+    </g>
+    <g transform="translate(286 14)">
+      <rect class="card" width="130" height="36" rx="8" />
+      <text class="chip-text" x="22" y="10" dominant-baseline="hanging">read heavy</text>
+    </g>
+    <g transform="translate(434 14)">
+      <rect class="card" width="156" height="36" rx="8" />
+      <text class="chip-text" x="22" y="10" dominant-baseline="hanging">global audience</text>
+    </g>
+    <g transform="translate(608 14)">
+      <rect class="card" width="224" height="36" rx="8" />
+      <text class="chip-text" x="22" y="10" dominant-baseline="hanging">media outside the DB</text>
+    </g>
+  </g>
+</svg>

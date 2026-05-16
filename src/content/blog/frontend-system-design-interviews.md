@@ -1,6 +1,6 @@
 ---
 title: "My notes on frontend system design interviews"
-description: "Frontend system design notes covering data loading, component architecture, performance, accessibility, and UX tradeoffs."
+description: "A frontend-focused version of my system design notes."
 pubDate: "Sept 1 2024"
 ---
 

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="600" viewBox="0 0 1280 600">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#15803d" />
+    </marker>
+  </defs>
+  <style>
+    .canvas { fill: #faf8f5; }
+    .box { fill: #fffdf8; stroke: #e8e3da; stroke-width: 2; }
+    .soft { fill: #f1ece2; stroke: #e8e3da; stroke-width: 2; }
+    .accent-fill { fill: #ecfdf3; stroke: #15803d; stroke-width: 2; }
+    .label { fill: #1a1815; font: 800 16px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .small { fill: #807a72; font: 600 12px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .connector { fill: none; stroke: #15803d; stroke-width: 2.5; marker-end: url(#arrow); }
+    .muted-connector { fill: none; stroke: #807a72; stroke-width: 2; stroke-dasharray: 7 7; marker-end: url(#arrow); }
+    .path-label { fill: #15803d; font: 800 12px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  </style>
+
+  <rect class="canvas" width="1280" height="600" />
+
+  <g transform="translate(62 262)">
+    <rect class="accent-fill" width="142" height="82" rx="8" />
+    <text class="label" x="44" y="22" dominant-baseline="hanging">Users</text>
+    <text class="small" x="31" y="52" dominant-baseline="hanging">web or mobile</text>
+  </g>
+
+  <g transform="translate(292 262)">
+    <rect class="box" width="156" height="82" rx="8" />
+    <text class="label" x="31" y="20" dominant-baseline="hanging">Load balancer</text>
+    <text class="small" x="37" y="52" dominant-baseline="hanging">routes traffic</text>
+  </g>
+
+  <g transform="translate(548 238)">
+    <rect class="box" width="184" height="130" rx="8" />
+    <text class="label" x="45" y="20" dominant-baseline="hanging">API servers</text>
+    <rect class="soft" x="24" y="60" width="60" height="36" rx="6" />
+    <rect class="soft" x="100" y="60" width="60" height="36" rx="6" />
+    <text class="small" x="38" y="71" dominant-baseline="hanging">api</text>
+    <text class="small" x="114" y="71" dominant-baseline="hanging">api</text>
+  </g>
+
+  <g transform="translate(824 238)">
+    <rect class="box" width="168" height="78" rx="8" />
+    <text class="label" x="57" y="18" dominant-baseline="hanging">Cache</text>
+    <text class="small" x="37" y="49" dominant-baseline="hanging">hot reads, TTLs</text>
+  </g>
+
+  <g transform="translate(1036 130)">
+    <rect class="box" width="176" height="82" rx="8" />
+    <text class="label" x="43" y="20" dominant-baseline="hanging">Primary DB</text>
+    <text class="small" x="55" y="52" dominant-baseline="hanging">writes</text>
+  </g>
+
+  <g transform="translate(1036 290)">
+    <rect class="box" width="176" height="82" rx="8" />
+    <text class="label" x="32" y="20" dominant-baseline="hanging">Read replicas</text>
+    <text class="small" x="41" y="52" dominant-baseline="hanging">read scaling</text>
+  </g>
+
+  <g transform="translate(824 432)">
+    <rect class="box" width="168" height="78" rx="8" />
+    <text class="label" x="59" y="18" dominant-baseline="hanging">Queue</text>
+    <text class="small" x="35" y="49" dominant-baseline="hanging">async jobs</text>
+  </g>
+
+  <g transform="translate(1036 432)">
+    <rect class="box" width="176" height="78" rx="8" />
+    <text class="label" x="55" y="18" dominant-baseline="hanging">Workers</text>
+    <text class="small" x="34" y="49" dominant-baseline="hanging">process uploads</text>
+  </g>
+
+  <g transform="translate(824 48)">
+    <rect class="box" width="168" height="78" rx="8" />
+    <text class="label" x="65" y="18" dominant-baseline="hanging">CDN</text>
+    <text class="small" x="33" y="49" dominant-baseline="hanging">static and media</text>
+  </g>
+
+  <g transform="translate(1036 48)">
+    <rect class="box" width="176" height="78" rx="8" />
+    <text class="label" x="29" y="18" dominant-baseline="hanging">Object storage</text>
+    <text class="small" x="44" y="49" dominant-baseline="hanging">videos, images</text>
+  </g>
+
+  <path class="connector" d="M 204 303 L 292 303" />
+  <text class="path-label" x="218" y="272" dominant-baseline="hanging">API requests</text>
+
+  <path class="connector" d="M 448 303 L 548 303" />
+  <path class="connector" d="M 732 303 C 760 303, 784 277, 824 277" />
+
+  <path class="connector" d="M 732 266 L 784 266 L 784 171 L 1036 171" />
+
+  <path class="connector" d="M 732 321 C 850 321, 906 331, 1036 331" />
+
+  <path class="muted-connector" d="M 1124 212 L 1124 290" />
+  <text class="small" x="1138" y="243" dominant-baseline="hanging">replication</text>
+
+  <path class="connector" d="M 732 356 C 774 396, 780 471, 824 471" />
+
+  <path class="connector" d="M 992 471 L 1036 471" />
+  <path class="connector" d="M 1212 471 L 1240 471 L 1240 87 L 1212 87" />
+
+  <path class="connector" d="M 992 87 L 1036 87" />
+  <path class="connector" d="M 154 262 C 306 114, 604 87, 824 87" />
+  <text class="path-label" x="386" y="80" dominant-baseline="hanging">static and video requests</text>
+</svg>

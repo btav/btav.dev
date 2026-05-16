@@ -1,6 +1,6 @@
 ---
 title: "My notes on system design interviews"
-description: "A simple flow for clarifying requirements, sketching architecture, and reasoning through tradeoffs in system design interviews."
+description: "How I think through system design prompts when the question is vague, and the clock is running."
 pubDate: "Aug 20 2024"
 ---
 
@@ -48,23 +48,7 @@ Non-functional requirements describe the quality of the system: scale, speed, re
 
 Do not treat every non-functional requirement as equally important. A chat app cares about real-time delivery. A banking system cares more about consistency. A news feed might care more about read scale and caching. Say which requirements matter most for the prompt you were given.
 
-![image of an example of requirements](/blog-system-design-interview-notes/requirements.png)
-
-### Calculations
-
-For more advanced interviews, you may need to do rough calculations. Keep them simple. The point is to show that your design fits the scale of the problem, not to get every number perfect.
-
-Useful estimates include:
-
-- Daily active users
-- Requests per second
-- Read/write ratio
-- Storage growth per day
-- Bandwidth for large assets like images and videos
-
-Use round numbers and explain your assumptions. If the interviewer gives you numbers, use theirs. If not, make reasonable assumptions and keep moving.
-
-![image breaking down some quick calculations on users](/blog-system-design-interview-notes/calculations.png)
+![Example requirements grouped by functional needs, non-functional needs, and assumptions for a video app](/blog-system-design-interview-notes/requirements.svg)
 
 ## 2. Design the Database and API Schemas
 
@@ -85,7 +69,7 @@ Indexes are worth calling out early. They make reads faster, but they add storag
 
 ### Example of a Video App Database Schema
 
-![image of an example database schema](/blog-system-design-interview-notes/db-schema.png)
+![Example database schema showing users, channels, videos, subscriptions, and reactions](/blog-system-design-interview-notes/db-schema.svg)
 
 ### API Design
 
@@ -244,7 +228,7 @@ This is a simple system diagram with components that apply to many web applicati
 - CDN for static assets
 - Queue and workers for slow background work
 
-![image of a system diagram for a typical web app setup](/blog-system-design-interview-notes/system-diagram.png)
+![Typical web application system diagram showing CDN, load balancer, API servers, cache, database, queue, workers, and object storage](/blog-system-design-interview-notes/system-diagram.svg)
 
 ## 4. Review the Diagram
 

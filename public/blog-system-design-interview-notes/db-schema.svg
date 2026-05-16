@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#15803d" />
+    </marker>
+  </defs>
+  <style>
+    .canvas { fill: #faf8f5; }
+    .table { fill: #fffdf8; stroke: #e8e3da; stroke-width: 2; }
+    .table-head { fill: #f1ece2; stroke: #e8e3da; stroke-width: 2; }
+    .row { stroke: #e8e3da; stroke-width: 1.5; }
+    .table-title { fill: #1a1815; font: 800 17px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .field { fill: #3a3833; font: 500 14px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .key { fill: #15803d; font: 800 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .connector { fill: none; stroke: #15803d; stroke-width: 2.5; marker-end: url(#arrow); }
+    .relation { fill: #15803d; font: 700 13px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  </style>
+
+  <rect class="canvas" width="1280" height="760" />
+
+  <g id="users" transform="translate(56 108)">
+    <rect class="table" width="300" height="260" rx="8" />
+    <rect class="table-head" width="300" height="44" rx="8" />
+    <text class="table-title" x="20" y="29">users</text>
+    <line class="row" x1="0" y1="44" x2="300" y2="44" />
+    <text class="field" x="20" y="69">id</text><text class="key" x="258" y="69">PK</text>
+    <line class="row" x1="0" y1="80" x2="300" y2="80" />
+    <text class="field" x="20" y="105">username</text><text class="key" x="230" y="105">UNIQ</text>
+    <line class="row" x1="0" y1="116" x2="300" y2="116" />
+    <text class="field" x="20" y="141">email</text><text class="key" x="230" y="141">UNIQ</text>
+    <line class="row" x1="0" y1="152" x2="300" y2="152" />
+    <text class="field" x="20" y="177">password_hash</text>
+    <line class="row" x1="0" y1="188" x2="300" y2="188" />
+    <text class="field" x="20" y="213">profile_picture_url</text>
+    <line class="row" x1="0" y1="224" x2="300" y2="224" />
+    <text class="field" x="20" y="249">created_at</text>
+  </g>
+
+  <g id="channels" transform="translate(474 84)">
+    <rect class="table" width="310" height="224" rx="8" />
+    <rect class="table-head" width="310" height="44" rx="8" />
+    <text class="table-title" x="20" y="29">channels</text>
+    <line class="row" x1="0" y1="44" x2="310" y2="44" />
+    <text class="field" x="20" y="69">id</text><text class="key" x="268" y="69">PK</text>
+    <line class="row" x1="0" y1="80" x2="310" y2="80" />
+    <text class="field" x="20" y="105">owner_user_id</text><text class="key" x="268" y="105">FK</text>
+    <line class="row" x1="0" y1="116" x2="310" y2="116" />
+    <text class="field" x="20" y="141">name</text>
+    <line class="row" x1="0" y1="152" x2="310" y2="152" />
+    <text class="field" x="20" y="177">description</text>
+    <line class="row" x1="0" y1="188" x2="310" y2="188" />
+    <text class="field" x="20" y="213">created_at</text>
+  </g>
+
+  <g id="videos" transform="translate(474 428)">
+    <rect class="table" width="310" height="260" rx="8" />
+    <rect class="table-head" width="310" height="44" rx="8" />
+    <text class="table-title" x="20" y="29">videos</text>
+    <line class="row" x1="0" y1="44" x2="310" y2="44" />
+    <text class="field" x="20" y="69">id</text><text class="key" x="268" y="69">PK</text>
+    <line class="row" x1="0" y1="80" x2="310" y2="80" />
+    <text class="field" x="20" y="105">channel_id</text><text class="key" x="268" y="105">FK</text>
+    <line class="row" x1="0" y1="116" x2="310" y2="116" />
+    <text class="field" x="20" y="141">title</text>
+    <line class="row" x1="0" y1="152" x2="310" y2="152" />
+    <text class="field" x="20" y="177">video_url</text>
+    <line class="row" x1="0" y1="188" x2="310" y2="188" />
+    <text class="field" x="20" y="213">views_count</text>
+    <line class="row" x1="0" y1="224" x2="310" y2="224" />
+    <text class="field" x="20" y="249">published_at</text>
+  </g>
+
+  <g id="subscriptions" transform="translate(898 84)">
+    <rect class="table" width="326" height="224" rx="8" />
+    <rect class="table-head" width="326" height="44" rx="8" />
+    <text class="table-title" x="20" y="29">subscriptions</text>
+    <line class="row" x1="0" y1="44" x2="326" y2="44" />
+    <text class="field" x="20" y="69">id</text><text class="key" x="284" y="69">PK</text>
+    <line class="row" x1="0" y1="80" x2="326" y2="80" />
+    <text class="field" x="20" y="105">user_id</text><text class="key" x="284" y="105">FK</text>
+    <line class="row" x1="0" y1="116" x2="326" y2="116" />
+    <text class="field" x="20" y="141">channel_id</text><text class="key" x="284" y="141">FK</text>
+    <line class="row" x1="0" y1="152" x2="326" y2="152" />
+    <text class="field" x="20" y="177">created_at</text>
+    <line class="row" x1="0" y1="188" x2="326" y2="188" />
+    <text class="key" x="20" y="213">UNIQUE(user_id, channel_id)</text>
+  </g>
+
+  <g id="reactions" transform="translate(898 428)">
+    <rect class="table" width="326" height="224" rx="8" />
+    <rect class="table-head" width="326" height="44" rx="8" />
+    <text class="table-title" x="20" y="29">video_reactions</text>
+    <line class="row" x1="0" y1="44" x2="326" y2="44" />
+    <text class="field" x="20" y="69">id</text><text class="key" x="284" y="69">PK</text>
+    <line class="row" x1="0" y1="80" x2="326" y2="80" />
+    <text class="field" x="20" y="105">user_id</text><text class="key" x="284" y="105">FK</text>
+    <line class="row" x1="0" y1="116" x2="326" y2="116" />
+    <text class="field" x="20" y="141">video_id</text><text class="key" x="284" y="141">FK</text>
+    <line class="row" x1="0" y1="152" x2="326" y2="152" />
+    <text class="field" x="20" y="177">reaction</text>
+    <line class="row" x1="0" y1="188" x2="326" y2="188" />
+    <text class="key" x="20" y="213">UNIQUE(user_id, video_id)</text>
+  </g>
+
+  <path class="connector" d="M 356 189 H 474" />
+  <text class="relation" x="394" y="172">owns</text>
+
+  <path class="connector" d="M 629 308 V 428" />
+  <text class="relation" x="646" y="372">publishes</text>
+
+  <path class="connector" d="M 784 194 H 898" />
+  <text class="relation" x="812" y="176">channel_id</text>
+
+  <path class="connector" d="M 356 244 H 400 V 52 H 1061 V 84" />
+  <text class="relation" x="404" y="70">user_id</text>
+
+  <path class="connector" d="M 784 538 H 898" />
+  <text class="relation" x="824" y="520">video_id</text>
+
+  <path class="connector" d="M 356 298 H 400 V 724 H 1061 V 652" />
+  <text class="relation" x="404" y="710">user_id</text>
+</svg>

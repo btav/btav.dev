@@ -1,6 +1,6 @@
 export const NAME = "Brian Farias Tavares";
 export const DESCRIPTION =
-  "I'm a software engineer based in Ottawa, Canada. I've worked in early-stage startups, mid-sized companies, and big tech, building everything from greenfield products to large-scale production systems. Outside of work, I help co-organize ForwardJS.";
+  "I'm a software engineer based in Ottawa, Canada. I've worked at early-stage startups, mid-sized companies, and big tech, building everything from greenfield products to large-scale production systems. Outside of work, I help co-organize ForwardJS.";
 export const FORWARDJS_URL = "https://forwardjs.com";
 export const SPOTIFY_URL = "https://open.spotify.com/user/brian_ft";
 export const GITHUB_URL = "https://github.com/btav";
